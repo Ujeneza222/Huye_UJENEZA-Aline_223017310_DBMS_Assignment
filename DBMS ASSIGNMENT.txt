@@ -1,0 +1,176 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database ruhande;
+ERROR 1007 (HY000): Can't create database 'ruhande'; database exists
+mysql> use ruhande;
+Database changed
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| ruhande            |
+| sys                |
++--------------------+
+5 rows in set (0.04 sec)
+
+mysql> create table ngoma(id int(16),first_name char(23),last_name char(12),gender char(15),province char(34),district char(25),sector char(19),cell char(26),email_address char(28),tel int(20));
+Query OK, 0 rows affected, 2 warnings (0.03 sec)
+
+mysql> insert into ngoma value ('12321','Aline','Ujeneza','Female','South','Kamonyi','Runda','Muganza','ujenezaaline12@gmail.com','0788686625');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> inert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com',0725671820');
+    '>
+    '> ;
+    '> inert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com',0725671820');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Ka' at line 1
+mysql>  insert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com',0725671820');
+    '> ;
+    '>  insert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com',0725671820');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '');
+;
+ insert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruha' at line 1
+mysql>  insert into ngoma value ('13231','Jenifer','Nyirubuhingiro','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com','0725671820');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into ngoma value ('13231','Jenifer','Nyirubuhingiro','Female','South','Ruhango','Kabagesera','Kagano','nyirubuhungirojeni23@gmail.com','0725671820');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into ngoma value('15623','Florance','Ayinkamiye','Female','South','Bugesera','Nyamata','Gako','ayinkamiye11@gmail.com','0785634215');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma value ('123563','Caline','Umurerwa','Female','South','Nyarugenge','Muhima','Muhima','umurerwacaline45@gmail.com','0798675438');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma value('134256','Bosco','Niyomugabo','Male','East','Nyagatare','Rukomo','Kabaya','niyomugabobosco24@gmail.com','0784563728');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma value('142673','Denis','Kabarebe','Male','West','Rusizi','cyomo','Kagema','kabarebedenis98@gmail.com','0726379400');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+| id     | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       |
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+|  12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 |
+|  13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 |
+|  15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 |
+| 123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 |
+| 134256 | Bosco      | Niyomugabo   | Male   | East     | Nyagatare  | Rukomo     | Kabaya  | niyomugabobosco24@gmail.com  | 784563728 |
+| 142673 | Denis      | Kabarebe     | Male   | West     | Rusizi     | cyomo      | Kagema  | kabarebedenis98@gmail.com    | 726379400 |
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> insert into ngoma value('1352683','Pamela','Ishimwe','FeMale','West','Rubavu','Kagugu','Kibuye','ishimwepamela98@gmail.com','0796475735');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma value('1352683','Caline',Uwera','Female','West','Rutsiro','Kagugu','Masaka','uweracaline98@gmail.com','0796775735');
+    '> ;
+    '> insert into ngoma value('167393','Caline',Uwera','Female','West','Rutsiro','Kagugu','Masaka','uweracaline98@gmail.com','0796775735');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '','Female','West','Rutsiro','Kagugu','Masaka','uweracaline98@gmail.com','0796775' at line 1
+mysql> insert into ngoma value('167393','Caline','Uwera','Female','West','Rutsiro','Kagugu','Masaka','uweracaline98@gmail.com','0796775735');
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into ngoma value('1642383','Clarisse','Umuhoza','FeMale','East','Kayonza','Gihara','Cyohoha','umuhozaclarisse98@gmail.com','0798964535');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into ngoma value('2345383','Angel','Akaliza','FeMale','East','Rwamagana','Kigabiro','Cyanya','akalizaangel898@gmail.com','0790986535');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from ngoma;
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+| id      | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+|   12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 |
+|   13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 |
+|   15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 |
+|  123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 |
+|  134256 | Bosco      | Niyomugabo   | Male   | East     | Nyagatare  | Rukomo     | Kabaya  | niyomugabobosco24@gmail.com  | 784563728 |
+|  142673 | Denis      | Kabarebe     | Male   | West     | Rusizi     | cyomo      | Kagema  | kabarebedenis98@gmail.com    | 726379400 |
+| 1352683 | Pamela     | Ishimwe      | FeMale | West     | Rubavu     | Kagugu     | Kibuye  | ishimwepamela98@gmail.com    | 796475735 |
+|  167393 | Caline     | Uwera        | Female | West     | Rutsiro    | Kagugu     | Masaka  | uweracaline98@gmail.com      | 796775735 |
+| 1642383 | Clarisse   | Umuhoza      | FeMale | East     | Kayonza    | Gihara     | Cyohoha | umuhozaclarisse98@gmail.com  | 798964535 |
+| 2345383 | Angel      | Akaliza      | FeMale | East     | Rwamagana  | Kigabiro   | Cyanya  | akalizaangel898@gmail.com    | 790986535 |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add mark int(9);
+Query OK, 10 rows affected, 1 warning (0.09 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select * from ngoma;
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+| id      | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       | mark |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+|   12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 | NULL |
+|   13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 | NULL |
+|   15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 | NULL |
+|  123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 | NULL |
+|  134256 | Bosco      | Niyomugabo   | Male   | East     | Nyagatare  | Rukomo     | Kabaya  | niyomugabobosco24@gmail.com  | 784563728 | NULL |
+|  142673 | Denis      | Kabarebe     | Male   | West     | Rusizi     | cyomo      | Kagema  | kabarebedenis98@gmail.com    | 726379400 | NULL |
+| 1352683 | Pamela     | Ishimwe      | FeMale | West     | Rubavu     | Kagugu     | Kibuye  | ishimwepamela98@gmail.com    | 796475735 | NULL |
+|  167393 | Caline     | Uwera        | Female | West     | Rutsiro    | Kagugu     | Masaka  | uweracaline98@gmail.com      | 796775735 | NULL |
+| 1642383 | Clarisse   | Umuhoza      | FeMale | East     | Kayonza    | Gihara     | Cyohoha | umuhozaclarisse98@gmail.com  | 798964535 | NULL |
+| 2345383 | Angel      | Akaliza      | FeMale | East     | Rwamagana  | Kigabiro   | Cyanya  | akalizaangel898@gmail.com    | 790986535 | NULL |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set marks='50'where id='12321';
+ERROR 1054 (42S22): Unknown column 'marks' in 'field list'
+mysql> select * from ngoma;
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+| id      | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       | mark |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+|   12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 | NULL |
+|   13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 | NULL |
+|   15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 | NULL |
+|  123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 | NULL |
+|  134256 | Bosco      | Niyomugabo   | Male   | East     | Nyagatare  | Rukomo     | Kabaya  | niyomugabobosco24@gmail.com  | 784563728 | NULL |
+|  142673 | Denis      | Kabarebe     | Male   | West     | Rusizi     | cyomo      | Kagema  | kabarebedenis98@gmail.com    | 726379400 | NULL |
+| 1352683 | Pamela     | Ishimwe      | FeMale | West     | Rubavu     | Kagugu     | Kibuye  | ishimwepamela98@gmail.com    | 796475735 | NULL |
+|  167393 | Caline     | Uwera        | Female | West     | Rutsiro    | Kagugu     | Masaka  | uweracaline98@gmail.com      | 796775735 | NULL |
+| 1642383 | Clarisse   | Umuhoza      | FeMale | East     | Kayonza    | Gihara     | Cyohoha | umuhozaclarisse98@gmail.com  | 798964535 | NULL |
+| 2345383 | Angel      | Akaliza      | FeMale | East     | Rwamagana  | Kigabiro   | Cyanya  | akalizaangel898@gmail.com    | 790986535 | NULL |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+10 rows in set (0.00 sec)
+
+mysql> select * from ngoma where gender='female' and province='south';
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+| id     | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       | mark |
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+|  12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 | NULL |
+|  13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 | NULL |
+|  15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 | NULL |
+| 123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 | NULL |
++--------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from ngoma where gender='female' or province='south';
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+| id      | first_name | last_name    | gender | province | district   | sector     | cell    | email_address                | tel       | mark |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+|   12321 | Aline      | Ujeneza      | Female | South    | Kamonyi    | Runda      | Muganza | ujenezaaline12@gmail.com     | 788686625 | NULL |
+|   13231 | Jenifer    | Nyirubuhingi | Female | South    | Ruhango    | Kabagesera | Kagano  | nyirubuhungirojeni23@gmail.c | 725671820 | NULL |
+|   15623 | Florance   | Ayinkamiye   | Female | South    | Bugesera   | Nyamata    | Gako    | ayinkamiye11@gmail.com       | 785634215 | NULL |
+|  123563 | Caline     | Umurerwa     | Female | South    | Nyarugenge | Muhima     | Muhima  | umurerwacaline45@gmail.com   | 798675438 | NULL |
+| 1352683 | Pamela     | Ishimwe      | FeMale | West     | Rubavu     | Kagugu     | Kibuye  | ishimwepamela98@gmail.com    | 796475735 | NULL |
+|  167393 | Caline     | Uwera        | Female | West     | Rutsiro    | Kagugu     | Masaka  | uweracaline98@gmail.com      | 796775735 | NULL |
+| 1642383 | Clarisse   | Umuhoza      | FeMale | East     | Kayonza    | Gihara     | Cyohoha | umuhozaclarisse98@gmail.com  | 798964535 | NULL |
+| 2345383 | Angel      | Akaliza      | FeMale | East     | Rwamagana  | Kigabiro   | Cyanya  | akalizaangel898@gmail.com    | 790986535 | NULL |
++---------+------------+--------------+--------+----------+------------+------------+---------+------------------------------+-----------+------+
+8 rows in set (0.00 sec)
+
+mysql>
